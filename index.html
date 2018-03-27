@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+
+   
+  </head>
+  <body>
+
+ <center><br><br><br><br><br>
+ <form id="myForm" action="#">
+  First name: <input type="text" name="fname"><br>
+  <br>Middle name: <input type="text" name="mname"><br>
+   <br>Last name: <input type="text" name="lname"><br>
+  <br>Email-Id: <input type="text" name="email"><br>
+  <br>Phone No.: <input type="text" name="phone"><br>
+ <br> <input type="submit" value="Submit">
+</form> 
+
+
+<br><button onclick="myFunction()">Print</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<br>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myForm").elements[0].value;
+
+     var x1 = document.getElementById("myForm").elements[1].value;
+    // document.getElementById("demo1").innerHTML = x1;
+
+    var x2 = document.getElementById("myForm").elements[2].value;
+    // document.getElementById("demo2").innerHTML = x2;
+
+    var x3 = document.getElementById("myForm").elements[3].value;
+    // document.getElementById("demo3").innerHTML = x3;
+
+    var x4 = document.getElementById("myForm").elements[4].value;
+    // document.getElementById("demo4").innerHTML = x4;
+
+    var json = {
+      firstName: x,
+      midelName: x1,
+      lastName: x2,
+      eMail: x3,
+      phoneNo: x4,
+    };
+    document.getElementById("demo").innerHTML = JSON.stringify(json);
+
+
+}
+</script>
+   
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
